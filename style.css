@@ -278,3 +278,5 @@ header.top{transition:box-shadow .3s,background .3s}header.top.sc{box-shadow:0 1
 @keyframes beanin{to{opacity:1}}
 .feat{padding:56px 0 20px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
 @media(max-width:860px){.grid4{grid-template-columns:1fr 1fr}.stage3{height:auto;padding-bottom:0;display:block;height:clamp(520px,150vw,700px)}.bagw{width:min(78vw,380px);margin-left:calc(min(78vw,380px)/-2);bottom:10px}}
+.wa-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,44px)}
+.wa-card h3{margin-bottom:18px}.wa-steps{margin:0 0 26px;padding-left:22px;color:var(--muted)}.wa-steps li+li{margin-top:10px}

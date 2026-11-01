@@ -20,7 +20,7 @@
 
 
 <a class="sr" href="#main" data-t="skip">Ir al contenido</a>
-<div class="ann"><div class="annt"><span data-t="an1">Café de especialidad de la Finca Las Mercedes · Pitalito, Huila</span><i>·</i><span data-t="an2">Tienda en construcción: precios e inventario próximamente</span><i>·</i><span data-t="an1">Café de especialidad de la Finca Las Mercedes · Pitalito, Huila</span><i>·</i><span data-t="an2">Tienda en construcción: precios e inventario próximamente</span><i>·</i></div></div>
+<div class="ann"><div class="annt"><span data-t="an1">Café de especialidad de la Finca Las Mercedes · Pitalito, Huila</span><i>·</i><span data-t="an2">Haz tu pedido por WhatsApp</span><i>·</i><span data-t="an1">Café de especialidad de la Finca Las Mercedes · Pitalito, Huila</span><i>·</i><span data-t="an2">Haz tu pedido por WhatsApp</span><i>·</i></div></div>
 <header class="top" id="hdr"><div class="wrap bar">
   <a class="logo" href="#inicio" aria-label="CASA MARIO"><img class="l" src="logo-color.webp" alt="CASA MARIO" width="120" height="48"><img class="d" src="logo-dark.webp" alt="CASA MARIO" width="120" height="48"></a>
   <nav class="main" id="nav" aria-label="Principal">
@@ -141,18 +141,16 @@
 
 <!-- ============ CONTACTO ============ -->
 <div class="view" id="v-contacto" hidden>
-  <section class="phead"><div class="wrap"><span class="eyebrow" data-t="co_eye">Contacto</span><h1 data-t="co_h1">Hablemos de café.</h1><p class="lead" data-t="co_lead">Para pedidos, atención a clientes, distribuidores y alianzas, escríbenos.</p></div></section>
+  <section class="phead"><div class="wrap"><span class="eyebrow" data-t="co_eye">Contacto</span><h1 data-t="co_h1">Hablemos de café.</h1><p class="lead" data-t="co_lead">Los pedidos se hacen por WhatsApp. Para atención a clientes, distribuidores y alianzas, escríbenos.</p></div></section>
   <section class="s" style="padding-top:20px"><div class="wrap cgrid">
-    <form class="cf" id="cf" novalidate>
-      <div class="two"><label class="field"><span data-t="fo_name">Nombre</span><input id="cName" autocomplete="name" required></label><label class="field"><span data-t="fo_mail">Correo electrónico</span><input id="cMail" type="email" autocomplete="email" required></label></div>
-      <label class="field"><span data-t="fo_topic">Motivo</span><select id="cTopic"><option value="p" data-t="fo_t1">Pedido o compra</option><option value="a" data-t="fo_t2">Atención al cliente</option><option value="d" data-t="fo_t3">Distribuidores y alianzas</option><option value="o" data-t="fo_t4">Otro</option></select></label>
-      <label class="field"><span data-t="fo_msg">Mensaje</span><textarea id="cMsg" rows="6" required></textarea></label>
-      <div><button class="btn" type="submit" data-t="fo_send">Enviar mensaje</button></div>
-      <div class="msg" id="cOut" hidden></div>
-    </form>
+    <div class="wa-card"><h3 data-t="wa_h">Haz tu pedido por WhatsApp</h3>
+      <ol class="wa-steps"><li data-t="wa_1">Elige tu café, el tamaño y la molienda.</li><li data-t="wa_2">Añádelo al carrito y pulsa “Hacer pedido por WhatsApp”.</li><li data-t="wa_3">Se abre WhatsApp con tu pedido ya escrito. Allí acordamos el pago y el envío.</li></ol>
+      <div class="cta"><a class="btn" id="cWaBig" href="#cafes" data-t="wa_b">Escribir por WhatsApp</a><a class="btn ghost" href="#cafes" data-t="wa_c">Ver los cafés</a></div>
+      <p class="note" id="waMiss" hidden style="margin-top:22px" data-t="wa_miss">Falta configurar el número de WhatsApp en app.js.</p></div>
     <div class="info">
-      <h3 data-t="in_mail">Correo electrónico</h3><p><span class="ed" id="ctMail">[CORREO]</span></p>
-      <h3 data-t="in_soc">Redes sociales</h3><p><span class="ed">[@INSTAGRAM]</span> <span class="ed">[@FACEBOOK]</span></p>
+      <h3 data-t="in_wa">WhatsApp</h3><p id="ctWa"></p>
+      <h3 data-t="in_mail">Correo electrónico</h3><p id="ctMail"></p>
+      <h3 data-t="in_soc">Redes sociales</h3><p id="ctSoc"></p>
       <h3 data-t="in_com">Información comercial</h3><p data-t="in_comp">[Razón social, NIT y datos del comercializador]</p>
       <h3 data-t="in_dis">Distribuidores y alianzas</h3><p data-t="in_disp">Si quieres llevar CASA MARIO a tu cafetería, tienda o proyecto, cuéntanos en el mensaje.</p>
       <h3 data-t="in_loc">Origen</h3><p>Finca Las Mercedes · Pitalito · Huila · Colombia</p>

@@ -6,7 +6,12 @@
    ============================================================ */
 const CASA_MARIO_CONFIG={
   currency:"COP",
-  contact:{michellvillaquira13@gmail.com:null},                       // ej. "hola@casamario.co"
+  contact:{
+    email:null,           // ej. "hola@casamario.co"
+    whatsapp:null,        // solo números con indicativo de país, ej. "573001234567"
+    instagram:null,       // solo el usuario, ej. "casamario"
+    facebook:null         // solo el usuario o nombre de la página
+  },
   payments:{provider:null,                    // ej. "wompi" | "mercadopago" | "payu" | "epayco"
             options:["Wompi","Mercado Pago","PayU","ePayco"]},
   shipping:{rates:null,freeFrom:null},        // tarifas por ciudad / envío gratis desde
@@ -25,7 +30,7 @@ const CASA_MARIO_CONFIG={
 const EN={
 skip:"Skip to content",n_inicio:"Home",n_hist:"Our story",n_cafes:"Our coffees",n_origen:"Origin",n_cult:"Coffee culture",n_cont:"Contact",
 a_cart:"Cart",a_menu:"Menu",a_filters:"Filters",
-h_eye:"Finca Las Mercedes · Pitalito, Huila",h_h1:"Memory made into coffee.",co1t:"Origin",co1:"Finca Las Mercedes, Pitalito, Huila.",co2t:"Hand painted",co2:"Botanical oil illustrations on every bag.",co3t:"Family memory",co3:"A name that honors grandfather Mario.",co4t:"To share",co4:"Coffee made for the table and the conversation.",mq1:"Memory made into coffee",mq2:"Finca Las Mercedes",mq3:"Pitalito · Huila · Colombia",mq4:"Specialty coffee",an1:"Specialty coffee from Finca Las Mercedes · Pitalito, Huila",an2:"Store under construction: prices and inventory coming soon",
+h_eye:"Finca Las Mercedes · Pitalito, Huila",h_h1:"Memory made into coffee.",co1t:"Origin",co1:"Finca Las Mercedes, Pitalito, Huila.",co2t:"Hand painted",co2:"Botanical oil illustrations on every bag.",co3t:"Family memory",co3:"A name that honors grandfather Mario.",co4t:"To share",co4:"Coffee made for the table and the conversation.",mq1:"Memory made into coffee",mq2:"Finca Las Mercedes",mq3:"Pitalito · Huila · Colombia",mq4:"Specialty coffee",an1:"Specialty coffee from Finca Las Mercedes · Pitalito, Huila",an2:"Place your order on WhatsApp",
 h_lead:"A specialty coffee born in the mountains of Huila, keeping the memory of a family, a house and everyone who always came back to the same table.",
 h_b1:"Discover our coffee",h_b2:"Our story",h_alt:"CASA MARIO coffee bag",h_tag:"Bag: digital representation",
 ph1:"Space for a real photograph",ph1b:"Landscape or coffee grove at Finca Las Mercedes. Replace with your own photograph.",
@@ -51,9 +56,9 @@ cu_eye:"Coffee culture",cu_h1:"Specialty coffee, for everyone.",cu_lead:"If you 
 un_eye:"The CASA MARIO universe",un_h1:"A botanical gallery, painted by hand.",un_lead:"Agapanthus, hummingbirds, coffee trees and cherries: the nature around the family, turned into identity.",
 g1:"The label: hummingbird, agapanthus and coffee branch.",g1a:"CASA MARIO label",g2:"Agapanthus garden.",g2a:"Agapanthus garden",g3:"The hummingbird, messenger of the farm.",g3a:"Hummingbird",g4:"Coffee branch with cherries.",g4a:"Coffee branch with cherries",g5:"The purple agapanthus, symbol of the brand.",g5a:"Purple agapanthus",
 ph4:"Space for real photographs",ph4b:"Farm, family and tradition.",g6:"The farm, in your own photographs.",
-co_eye:"Contact",co_h1:"Let's talk coffee.",co_lead:"For orders, customer care, distributors and partnerships, write to us.",
+co_eye:"Contact",co_h1:"Let's talk coffee.",co_lead:"Orders are placed on WhatsApp. For customer care, distributors and partnerships, write to us.",
 fo_name:"Name",fo_mail:"Email",fo_topic:"Subject",fo_t1:"Order or purchase",fo_t2:"Customer care",fo_t3:"Distributors and partnerships",fo_t4:"Other",fo_msg:"Message",fo_send:"Send message",
-in_mail:"Email",in_soc:"Social media",in_com:"Business information",in_comp:"[Company name, tax ID and distributor details]",in_dis:"Distributors and partnerships",in_disp:"If you want to bring CASA MARIO to your café, shop or project, tell us in your message.",in_loc:"Origin",
+in_wa:"WhatsApp",wa_h:"Place your order on WhatsApp",wa_1:"Choose your coffee, size and grind.",wa_2:"Add it to the cart and press “Place order on WhatsApp”.",wa_3:"WhatsApp opens with your order already written. We arrange payment and shipping there.",wa_b:"Message us on WhatsApp",wa_c:"See the coffees",wa_miss:"The WhatsApp number is not set yet in app.js.",in_mail:"Email",in_soc:"Social media",in_com:"Business information",in_comp:"[Company name, tax ID and distributor details]",in_dis:"Distributors and partnerships",in_disp:"If you want to bring CASA MARIO to your café, shop or project, tell us in your message.",in_loc:"Origin",
 ft_p:"Memory made into coffee. Specialty coffee from Finca Las Mercedes, Pitalito, Huila.",ft_nav:"Explore",n_hist2:"Our story",n_cafes2:"Our coffees",n_origen2:"Origin",n_cult2:"Coffee culture",n_uni2:"The universe",ft_help:"Help",n_cont2:"Contact",ft_dist:"Distributors",ft_note:"Photographs and information are provisional."
 };
 /* textos dinámicos */
@@ -62,7 +67,7 @@ es:{lang:"es",tbd:"Por definir",provisional:"Producto provisional",nameTbd:"[Nom
  variety:"Variedad",process:"Proceso",altitude:"Altitud",notes:"Notas de cata",roast:"Tueste",origin:"Origen",size:"Tamaño",grind:"Molienda",qty:"Cantidad",
  grano:"Grano",molido:"Molido",all:"Todos",ligero:"Ligero",medio:"Medio",oscuro:"Oscuro",
  prepT:"Recomendaciones de preparación",prep:"<b>Filtrado:</b> [ratio] · [temperatura] · [tiempo]. <b>Prensa francesa:</b> [ratio] · [tiempo]. <b>Espresso:</b> [dosis] · [tiempo]. Los valores se completan con el perfil real del café.",
- close:"Cerrar",cart:"Tu carrito",empty:"Tu carrito está vacío.",remove:"Quitar",subtotal:"Subtotal",priceTbd:"Precio por definir",shipping:"Envío",shipTbd:"Se calcula al pagar (tarifas por definir)",
+ oName:"Tu nombre",oCity:"Ciudad",orderBtn:"Hacer pedido por WhatsApp",orderNote:"Se abre WhatsApp con tu pedido ya escrito. El pago y el envío los acordamos allí.",noWaT:"WhatsApp sin configurar",noWa:"Falta el número de WhatsApp de la tienda en app.js (contact.whatsapp).",msgHead:"Hola CASA MARIO, quiero hacer este pedido:",msgEnd:"Quedo atento(a) para confirmar el pago y el envío. ¡Gracias!",hello:"Hola CASA MARIO, quisiera más información sobre su café.",close:"Cerrar",cart:"Tu carrito",empty:"Tu carrito está vacío.",remove:"Quitar",subtotal:"Subtotal",priceTbd:"Precio por definir",shipping:"Envío",shipTbd:"Se acuerda por WhatsApp",
  checkout:"Ir a pagar",payT:"Pagos no configurados",payP:"Esta tienda todavía no tiene una pasarela de pago conectada, así que no se puede finalizar la compra. La arquitectura está lista para integrar:",
  added:"Añadido al carrito",unit:"g",from:"desde",
  stages:[["Cafetales","La mata","[Texto sobre los cafetales de Las Mercedes: variedades, sombra, altura. Completar con datos reales.]"],["Cerezas","El fruto","[Texto sobre la cereza de café de la finca y su punto de maduración.]"],["Recolección","La cosecha","[Texto sobre cómo y cuándo se recolecta en Las Mercedes.]"],["Procesamiento","Del fruto al grano","[Texto sobre el beneficio, fermentación y secado que usa la finca.]"],["Del territorio","Pitalito, Huila","[Texto sobre la historia del territorio: Pitalito y el sur del Huila.]"]],
@@ -74,12 +79,12 @@ es:{lang:"es",tbd:"Por definir",provisional:"Producto provisional",nameTbd:"[Nom
  ["Cómo reconocer los perfiles sensoriales","<ul><li><b>Aroma:</b> lo que percibes antes de beber.</li><li><b>Acidez:</b> la viveza, como la de una fruta.</li><li><b>Dulzor:</b> sensación de azúcar o miel.</li><li><b>Cuerpo:</b> el peso y la textura en la boca.</li><li><b>Final:</b> lo que queda después de tragar.</li></ul>"],
  ["Conoce el proceso del café","<p>Cereza, despulpado, fermentación, lavado, secado, trilla, tueste y taza. Cada etapa cambia el sabor. El proceso real de Las Mercedes se describirá en la sección Origen.</p>"],
  ["Consejos para conservar y preparar tu café","<ul><li>Guárdalo en su bolsa bien cerrada, lejos de la luz, el calor y la humedad.</li><li>No lo guardes en la nevera.</li><li>Muele justo antes de preparar.</li><li>Consúmelo dentro de las semanas posteriores al tueste.</li></ul>"]],
- form:{need:"Completa nombre, correo y mensaje.",bad:"El correo no parece válido.",note:"<b>Este formulario aún no está conectado a un servicio de envío</b>, así que tu mensaje no se envió. Copia el texto y escríbenos al correo de contacto cuando esté disponible."}},
+ form:{sent:"Mensaje enviado. Gracias, te responderemos pronto.",fail:"No pudimos enviar el mensaje. Inténtalo de nuevo o escríbenos por WhatsApp o correo.",need2:"Escribe tu mensaje antes de abrir WhatsApp.",need:"Completa nombre, correo y mensaje.",bad:"El correo no parece válido.",note:"<b>Este formulario aún no está conectado a un servicio de envío</b>, así que tu mensaje no se envió. Copia el texto y escríbenos al correo de contacto cuando esté disponible."}},
 en:{lang:"en",tbd:"To be defined",provisional:"Provisional product",nameTbd:"[Coffee name]",add:"Add to cart",view:"View details",soldout:"Sold out",stockTbd:"Inventory to be defined",
  variety:"Variety",process:"Process",altitude:"Altitude",notes:"Tasting notes",roast:"Roast",origin:"Origin",size:"Size",grind:"Grind",qty:"Quantity",
  grano:"Whole bean",molido:"Ground",all:"All",ligero:"Light",medio:"Medium",oscuro:"Dark",
  prepT:"Brewing recommendations",prep:"<b>Pour over:</b> [ratio] · [temperature] · [time]. <b>French press:</b> [ratio] · [time]. <b>Espresso:</b> [dose] · [time]. Values are completed with the real profile of the coffee.",
- close:"Close",cart:"Your cart",empty:"Your cart is empty.",remove:"Remove",subtotal:"Subtotal",priceTbd:"Price to be defined",shipping:"Shipping",shipTbd:"Calculated at checkout (rates to be defined)",
+ oName:"Your name",oCity:"City",orderBtn:"Place order on WhatsApp",orderNote:"WhatsApp opens with your order already written. We arrange payment and shipping there.",noWaT:"WhatsApp not configured",noWa:"The store WhatsApp number is missing in app.js (contact.whatsapp).",msgHead:"Hello CASA MARIO, I would like to place this order:",msgEnd:"I look forward to confirming payment and shipping. Thank you!",hello:"Hello CASA MARIO, I would like more information about your coffee.",close:"Close",cart:"Your cart",empty:"Your cart is empty.",remove:"Remove",subtotal:"Subtotal",priceTbd:"Price to be defined",shipping:"Shipping",shipTbd:"Arranged on WhatsApp",
  checkout:"Checkout",payT:"Payments not configured",payP:"This store does not have a payment gateway connected yet, so the purchase cannot be completed. The architecture is ready to integrate:",
  added:"Added to cart",unit:"g",from:"from",
  stages:[["Coffee groves","The plant","[Text about the coffee groves at Las Mercedes: varieties, shade, altitude. Complete with real data.]"],["Cherries","The fruit","[Text about the farm's coffee cherry and its ripeness.]"],["Harvest","The picking","[Text about how and when picking happens at Las Mercedes.]"],["Processing","From fruit to bean","[Text about the milling, fermentation and drying used by the farm.]"],["The territory","Pitalito, Huila","[Text about the history of the territory: Pitalito and southern Huila.]"]],
@@ -91,7 +96,7 @@ en:{lang:"en",tbd:"To be defined",provisional:"Provisional product",nameTbd:"[Co
  ["How to recognize flavor profiles","<ul><li><b>Aroma:</b> what you notice before drinking.</li><li><b>Acidity:</b> the brightness, like a fruit's.</li><li><b>Sweetness:</b> a sense of sugar or honey.</li><li><b>Body:</b> the weight and texture in the mouth.</li><li><b>Finish:</b> what remains after swallowing.</li></ul>"],
  ["Know the coffee process","<p>Cherry, pulping, fermentation, washing, drying, hulling, roasting and cup. Each stage changes the flavor. The real process at Las Mercedes will be described in the Origin section.</p>"],
  ["Tips to store and brew your coffee","<ul><li>Keep it in its sealed bag, away from light, heat and moisture.</li><li>Do not store it in the fridge.</li><li>Grind right before brewing.</li><li>Drink it within weeks of the roast date.</li></ul>"]],
- form:{need:"Fill in name, email and message.",bad:"The email does not look valid.",note:"<b>This form is not connected to a sending service yet</b>, so your message was not sent. Copy the text and write to the contact email once it is available."}}
+ form:{sent:"Message sent. Thank you, we will reply soon.",fail:"We could not send the message. Please try again or write to us on WhatsApp or by email.",need2:"Write your message before opening WhatsApp.",need:"Fill in name, email and message.",bad:"The email does not look valid.",note:"<b>This form is not connected to a sending service yet</b>, so your message was not sent. Copy the text and write to the contact email once it is available."}}
 };
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const ES={};
@@ -164,10 +169,22 @@ function renderCart(){
   $("#drawer").innerHTML=`<div style="display:flex;justify-content:space-between;align-items:start"><h3>${t.cart}</h3><button class="x" style="position:static" id="cClose" aria-label="${t.close}">×</button></div>
   <div class="items">${rows||`<p style="color:var(--muted)">${t.empty}</p>`}</div>
   ${cart.length?`<div class="sum"><div class="r"><span>${t.subtotal}</span><strong>${sub}</strong></div><div class="r" style="color:var(--muted);font-size:.9rem"><span>${t.shipping}</span><span>${t.shipTbd}</span></div>
-  <div class="pay" id="payBox" hidden><b>${t.payT}</b><br>${t.payP} ${pay.options.join(", ")}.</div><button class="btn" id="goPay">${t.checkout}</button></div>`:""}`;
+  <div class="two"><label class="field">${t.oName}<input id="oName" value="${OD.name.replace(/"/g,"&quot;")}" autocomplete="name"></label><label class="field">${t.oCity}<input id="oCity" value="${OD.city.replace(/"/g,"&quot;")}" autocomplete="address-level2"></label></div>
+  <div class="pay" id="payBox" hidden><b>${t.noWaT}</b><br>${t.noWa}</div><button class="btn" id="goWa">${t.orderBtn}</button><p class="note" style="margin:0">${t.orderNote}</p></div>`:""}`;
   $("#cClose").onclick=closeCart;
   $$("[data-m]").forEach(b=>b.onclick=()=>chg(b.dataset.m,-1));$$("[data-p]").forEach(b=>b.onclick=()=>chg(b.dataset.p,1));$$("[data-x]").forEach(b=>b.onclick=()=>{cart=cart.filter(i=>i.k!==b.dataset.x);saveCart();renderCart()});
-  const g=$("#goPay");if(g)g.onclick=()=>{if(!pay.provider)$("#payBox").hidden=false};
+  const g=$("#goWa");if(g){$("#oName").oninput=e=>OD.name=e.target.value;$("#oCity").oninput=e=>OD.city=e.target.value;g.onclick=sendOrder}
+}
+let OD={name:"",city:""};
+function sendOrder(){
+  const t=T(),wa=CASA_MARIO_CONFIG.contact.whatsapp;if(!wa){$("#payBox").hidden=false;return}
+  const lines=cart.map(i=>{const p=P.find(x=>x.id===i.pid),s=p.sizes[i.si];return `• ${i.q} × ${pName(p)} — ${s.g>=1000?s.g/1000+" kg":s.g+" g"}, ${t[i.grind]}${s.price!=null?" — "+money(s.price*i.q):""}`});
+  const known=cart.every(i=>P.find(x=>x.id===i.pid).sizes[i.si].price!=null);
+  let msg=t.msgHead+"\n\n"+lines.join("\n");
+  if(known)msg+="\n\n"+t.subtotal+": "+money(cart.reduce((a,i)=>a+P.find(x=>x.id===i.pid).sizes[i.si].price*i.q,0));
+  if(OD.name.trim())msg+="\n\n"+t.oName+": "+OD.name.trim();if(OD.city.trim())msg+="\n"+t.oCity+": "+OD.city.trim();
+  msg+="\n\n"+t.msgEnd;
+  window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(msg),"_blank","noopener");
 }
 function chg(k,d){const i=cart.find(x=>x.k===k);i.q+=d;if(i.q<=0)cart=cart.filter(x=>x!==i);saveCart();renderCart()}
 function openCart(){renderCart();$("#drawer").classList.add("on");$("#scrim").classList.add("on");document.body.style.overflow="hidden";setTimeout(()=>$("#cClose").focus(),30)}
@@ -179,11 +196,14 @@ function renderStages(){const t=T();$("#stages").innerHTML=t.stages.map((s,i)=>`
 function renderCats(){const t=T();$("#cats").innerHTML=t.cats.map((c,i)=>`<div class="cat" data-open="false"><button aria-expanded="false" aria-controls="cm${i}"><span class="k">${i+1}</span><h3>${c[0]}</h3><span class="pl" aria-hidden="true">+</span></button><div class="more" id="cm${i}" hidden>${c[1]}</div></div>`).join("");
   $$(".cat>button").forEach(b=>b.onclick=()=>{const c=b.parentElement,o=c.dataset.open!=="true";c.dataset.open=o;b.setAttribute("aria-expanded",o);$(".more",c).hidden=!o})}
 /* ============================ contacto ============================ */
-$("#cf").addEventListener("submit",e=>{e.preventDefault();const t=T().form,o=$("#cOut");o.hidden=false;
-  if(!$("#cName").value.trim()||!$("#cMail").value.trim()||!$("#cMsg").value.trim()){o.innerHTML=t.need;return}
-  if(!/^\S+@\S+\.\S+$/.test($("#cMail").value)){o.innerHTML=t.bad;return}
-  o.innerHTML=t.note});
-function renderMail(){const m=CASA_MARIO_CONFIG.contact.email;$("#ctMail").textContent=m||"[michellvillaquira13@gmail.com]"}
+const CT=()=>CASA_MARIO_CONFIG.contact;
+function waLink(txt){return "https://wa.me/"+CT().whatsapp+(txt?"?text="+encodeURIComponent(txt):"")}
+function renderMail(){const c=CT(),t=T(),ph=`<span class="ed">${t.tbd}</span>`;
+  $("#ctMail").innerHTML=c.email?`<a href="mailto:${c.email}">${c.email}</a>`:ph;
+  $("#ctWa").innerHTML=c.whatsapp?`<a href="${waLink()}" target="_blank" rel="noopener">+${c.whatsapp}</a>`:ph;
+  const soc=[];if(c.instagram)soc.push(`<a href="https://instagram.com/${c.instagram}" target="_blank" rel="noopener">Instagram @${c.instagram}</a>`);if(c.facebook)soc.push(`<a href="https://facebook.com/${c.facebook}" target="_blank" rel="noopener">Facebook</a>`);
+  $("#ctSoc").innerHTML=soc.length?soc.join(" · "):ph;
+  const big=$("#cWaBig");if(c.whatsapp){big.href=waLink(T().hello);big.target="_blank";big.rel="noopener";$("#waMiss").hidden=true}else{big.href="#contacto";big.removeAttribute("target");$("#waMiss").hidden=false}}
 /* ============================ rutas ============================ */
 const ROUTES=["inicio","historia","cafes","origen","cultura","universo","contacto"];
 function route(){let h=(location.hash||"#inicio").slice(1);if(!ROUTES.includes(h))h="inicio";
