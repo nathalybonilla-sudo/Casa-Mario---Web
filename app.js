@@ -183,7 +183,7 @@ $("#cf").addEventListener("submit",e=>{e.preventDefault();const t=T().form,o=$("
   if(!$("#cName").value.trim()||!$("#cMail").value.trim()||!$("#cMsg").value.trim()){o.innerHTML=t.need;return}
   if(!/^\S+@\S+\.\S+$/.test($("#cMail").value)){o.innerHTML=t.bad;return}
   o.innerHTML=t.note});
-function renderMail(){const m=CASA_MARIO_CONFIG.contact.email;$("#ctMail").textContent=m||"[CORREO]"}
+function renderMail(){const m=CASA_MARIO_CONFIG.contact.email;$("#ctMail").textContent=m||"[michellvillaquira13@gmail.com]"}
 /* ============================ rutas ============================ */
 const ROUTES=["inicio","historia","cafes","origen","cultura","universo","contacto"];
 function route(){let h=(location.hash||"#inicio").slice(1);if(!ROUTES.includes(h))h="inicio";
