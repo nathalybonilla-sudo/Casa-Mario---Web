@@ -6,7 +6,7 @@
    ============================================================ */
 const CASA_MARIO_CONFIG={
   currency:"COP",
-  contact:{email:null},                       // ej. "hola@casamario.co"
+  contact:{michellvillaquira13@gmail.com:null},                       // ej. "hola@casamario.co"
   payments:{provider:null,                    // ej. "wompi" | "mercadopago" | "payu" | "epayco"
             options:["Wompi","Mercado Pago","PayU","ePayco"]},
   shipping:{rates:null,freeFrom:null},        // tarifas por ciudad / envío gratis desde
