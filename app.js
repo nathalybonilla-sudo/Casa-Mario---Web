@@ -7,8 +7,8 @@
 const CASA_MARIO_CONFIG={
   currency:"COP",
   contact:{
-    email:null,           // ej. "hola@casamario.co"
-    whatsapp:null,        // solo números con indicativo de país, ej. "573001234567"
+    email:"michellvillaquira13@gmail.com",           // ej. "hola@casamario.co"
+    whatsapp:"573105793439",        // solo números con indicativo de país, ej. "573001234567"
     instagram:null,       // solo el usuario, ej. "casamario"
     facebook:null         // solo el usuario o nombre de la página
   },
